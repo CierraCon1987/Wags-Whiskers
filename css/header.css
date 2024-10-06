@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 :root {
-    --primary: ;
-    --secondary: ;
+    --primary: #00A08B;
+    --compliment1: #8CBE70;
+    --compliment2: #FF8B61;
+    --accent1: #FF7A50;
+    --accent2: #FFCA89;
     --white: #ffffff;
     --black: #000000;
-    --tertiary: ;
-    
-
-    --tone-1: ;
+    --darkgrey: #575757;
+    --lightgrey: #9F9F9F;
+    --neutral1: #DEE2E6;
+    --neutral2: #2F4F4F;
+    --neutral3: #F0F0F0;
+    --error: #EF4040;
 
     /* Sizes */
     --size-2xs: 0.25rem;
@@ -65,16 +70,44 @@ body {
 }
 
 .page-header {
-    background-image: linear-gradient(351deg, transparent, #00000073), url(../images/header-bg.png);
+    position: relative;
+    height: 50vh;
     display: flex;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: darken;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(351deg, transparent, rgba(0, 0, 0, 0.45));
+    z-index: 1;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; 
 }
 
 .header-content {
+    position: relative;
+    z-index: 2;
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
 }
 
 .logo {
@@ -83,7 +116,6 @@ body {
     justify-content: center;
     position: relative;
 }
-
 
 .logo img {
     width: 147px;
@@ -125,24 +157,49 @@ body {
 
 .link-salute ul li:last-child a:first-child {
     background-color: var(--primary);
+    border: solid 2px var(--primary);
     margin-right: 10px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border-radius: 7px;
     font-size: 16px;
     color: var(--white);
 }
 
+.link-salute ul li:last-child a:first-child:hover {
+    background-color: var(--compliment2);
+    border: solid 2px var(--compliment2);
+    margin-right: 10px;
+    padding: 10px 30px;
+    border-radius: 7px;
+    font-size: 16px;
+    color: var(--black);
+}
+
 .link-salute ul li:last-child a:last-child {
-    background-color: var(--secondary);
-    padding: 10px;
+    border: solid 2px var(--primary);
+    padding: 10px 30px;
     border-radius: 7px;
     font-size: 16px;
     color: var(--white);
     font-size: 16px;
+}
+
+.link-salute ul li:last-child a:last-child:hover {
+    border: solid 2px var(--compliment2);
+    padding: 10px 30px;
+    border-radius: 7px;
+    font-size: 16px;
+    color: var(--black);
+    font-size: 16px;
+}
+
+.links a.active {
+    border-bottom: 3px solid var(--accent1);
 }
 
 .salute {
     text-align: center;
+    color: var(--white);
 }
 
 .salute h1,
@@ -213,12 +270,24 @@ footer {
     display: flex;
 }
 
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
 .quick-link {
     flex-basis: 10%;
 }
 
+.quick-link ul li a:hover {
+    color: var(--primary)
+}
+
 .legal {
     flex-basis: 20%;
+}
+
+.legal ul li a:hover {
+    color: var(--primary)
 }
 
 .brand-logo {
