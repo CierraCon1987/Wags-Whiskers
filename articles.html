@@ -6,13 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Wags &amp; Whiskers</title>
     <link rel="icon" type="image/x-icon" href="/images/wandw-favicon.svg">
-
-    <!-- Bootstrap -->
-
-
-    <!-- Custom CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
-</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .salute h1 {
+            font-size: 3rem;
+        }
+
+        .container-fluid {
+            padding-top: 30px;
+        }
+
+        /* Blog post styling */
+        .blog-post {
+            margin-bottom: 30px;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .blog-post h2 {
+            font-size: 1.75rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-post time {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .blog-post h2 a {
+            color: #2F4F4F;
+            text-decoration: none;
+        }
+
+        .blog-post h2 a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        /* Staff picks section */
+        .staff-picks {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .staff-pick {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .staff-pick h3 a {
+            color: #2F4F4F;
+            text-decoration: none;
+        }
+
+        .staff-pick h3 a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+    </style>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About | Wags &amp; Whiskers</title>
+        <link rel="icon" type="image/x-icon" href="/images/wandw-favicon.svg">
+        <link href="css/header.css" rel="stylesheet">
+        <link href="css/about.css" rel="stylesheet">
+    </head>
 
 <body>
     <header class="page-header">
@@ -36,7 +114,6 @@
                         <li id="login"><a href="login-register.html">Login</a><a href="register.html">Sign Up</a></li>
                     </ul>
                 </div>
-
             </div>
         </div>
         <div class="salute">
@@ -45,18 +122,69 @@
             <p id="tagline">Caring for Your Pets, One Wag at a Time</p>
         </div>
     </header>
-    <main>
+    <main class="container-fluid">
+        <div class="row">
+            <!-- Blog Articles -->
+            <div class="col-md-8">
+                <!-- First Blog Post -->
+                <div class="blog-post">
+                    <img loading="lazy" src="images/snoopy.jpg" alt="Snoopy Adoption Story">
+                    <h2><a href="https://" target="_blank">After 6 Months "Snoopy" Gets Adopted!</a></h2>
+                    <time>03/10/2024</time>
+                    <p>A heartwarming story about Snoopy finally finding his forever home after 6 long months of
+                        waiting.</p>
+                </div>
 
+                <!-- Second Blog Post -->
+                <div class="blog-post">
+                    <img loading="lazy" src="images/dogeating.jpg" alt="DIY Pet Treats">
+                    <h2><a href="https:" target="_blank">DIY Pet Treat Recipes Your Pets Will Love</a></h2>
+                    <time>02/15/2024</time>
+                    <p>Learn how to make healthy, homemade treats for your pets that are both easy and nutritious!</p>
+                </div>
 
+                <!-- Third Blog Post -->
+                <div class="blog-post">
+                    <img loading="lazy" src="images/catplaying.jpg" alt="New Pet Preparation">
+                    <h2><a href="https://" target="_blank">How to Prepare Your Home for a New Puppy or Kitten</a></h2>
+                    <time>01/30/2024</time>
+                    <p>Step-by-step guide to get your home ready for a new furry friend.</p>
+                </div>
+            </div>
 
+            <!-- Staff Picks -->
+            <aside class="col-md-4">
+                <div class="staff-picks">
+                    <h2>Staff Picks</h2>
+                    <div class="staff-pick">
+                        <h3><a href="https://" target="_blank">How to Choose the Perfect Toy for Your Pet</a></h3>
+                        <time>06/09/2024</time>
+                    </div>
+                    <div class="staff-pick">
+                        <h3><a href="https://" target="_blank">5 Essential Tips for New Pet Owners</a></h3>
+                        <time>12/08/2024</time>
+                    </div>
+                    <div class="staff-pick">
+                        <h3><a href="https://" target="_blank">Grooming 101: How to Keep Your Pet's Coat Healthy and
+                                Shiny</a></h3>
+                        <time>01/02/2024</time>
+                    </div>
+                    <div class="staff-pick">
+                        <h3><a href="https://" target="_blank">The Importance of Choosing the Right Pet Food</a></h3>
+                        <time>01/09/2024</time>
+                    </div>
+                </div>
+            </aside>
+        </div>
     </main>
+
     <footer>
         <div class="link-section">
             <div class="company-info">
                 <h2>Social Media</h2>
                 <p>
-                    Follow us on social media for the latest updates, 
-                    pet care tips, and exclusive offers! Stay connected with Wags 
+                    Follow us on social media for the latest updates,
+                    pet care tips, and exclusive offers! Stay connected with Wags
                     &amp; Whiskers and join our community of pet lovers.
                 </p>
                 <div class="social-icon">
@@ -109,6 +237,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

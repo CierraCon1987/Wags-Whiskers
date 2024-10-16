@@ -6,14 +6,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Wags &amp; Whiskers</title>
     <link rel="icon" type="image/x-icon" href="/images/wandw-favicon.svg">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
-    <!-- Custom CSS -->
     <link href="css/header.css" rel="stylesheet">
-    <link href="css/about.css" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Mission */
+        .mission-section {
+            display: flex;
+            padding: 50px 0;
+        }
+
+        .mission-text {
+            background-color: #065f46;
+            color: #fff;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 400px;
+        }
+
+        .mission-description {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #fff;
+        }
+
+        .about-mission {
+            padding: 50px 0;
+        }
+
+        .mission-title {
+            font-size: 2rem;
+            margin-bottom: 45px;
+            color: #fff;
+        }
+
+        .mission-image {
+            max-width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+
+        /* Team */
+        .team-section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .team-members {
+            justify-content: center;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .team-member-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .team-member-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .team-member-title {
+            display: block;
+            font-size: 1rem;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* About Store  */
+        .store-text {
+            background-color: #065f46;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .store-description {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #fff;
+        }
+
+        .about-store {
+            padding: 50px 0;
+        }
+
+        .store-description {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .store-image {
+            max-width: 100%;
+
+        }
+    </style>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About | Wags &amp; Whiskers</title>
+        <link rel="icon" type="image/x-icon" href="/images/wandw-favicon.svg">
+        <link href="css/header.css" rel="stylesheet">
+        <link href="css/about.css" rel="stylesheet">
+    </head>
 
 <body>
     <header class="page-header">
@@ -38,7 +167,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
         <div class="salute">
@@ -48,6 +176,7 @@
         </div>
     </header>
     <main>
+        <!-- About Us Section -->
         <section class="about-us-section">
             <div class="container">
                 <section class="row align-items-center mission-section">
@@ -61,12 +190,11 @@
                             class="mission-image img-fluid">
                     </div>
                 </section>
-
+                <!-- The Team -->
                 <h2 class="team-section-title">Meet the Team</h2>
                 <section class="row team-members">
                     <article class="col-md-4 team-member">
-                        <img src="images/general/man.jpg" alt="Mike Smith"
-                            class="team-member-image img-fluid rounded-circle">
+                        <img src="images/general/man.jpg" alt="Mike Smith" class="team-member-image img-fluid rounded-circle">
                         <h3 class="team-member-name">Mike Smith <span class="team-member-title">Store Manager</span>
                         </h3>
                     </article>
@@ -84,7 +212,7 @@
                                 Specialist</span></h3>
                     </article>
                 </section>
-
+                <!-- Store Description -->
                 <section class="row about-store mt-4">
                     <div class="col-md-6 store-text">
                         <p class="store-description">
@@ -95,17 +223,12 @@
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <div class="contact-map">
-                            <iframe
-                                src="https://maps.google.com/maps?q=123%20King%20St%20Kitchener&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
+                        <img src="images/general/map.png" alt="Store Image" class="store-image img-fluid">
                     </div>
                 </section>
             </div>
         </section>
     </main>
-
     <footer>
         <div class="link-section">
             <div class="company-info">
