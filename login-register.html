@@ -7,6 +7,7 @@
     <title>Home | Wags &amp; Whiskers</title>
     <link rel="icon" type="image/x-icon" href="/images/wandw-favicon.svg">
     <link href="css/header.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,9 +27,9 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="products.html">Products</a></li>
                         <li><a href="adoption.html">Adoption</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
                         <li><a href="articles.html">Articles</a></li>
-                        <li id="login"><a href="login-register.html">Login</a><a href="login-register.html">Sign Up</a></li>
+                        <li id="login"><a href="login-register.html">Login</a><a href="register.html">Sign Up</a></li>
                     </ul>
                 </div>
 
@@ -39,11 +40,84 @@
             <h1>Wags &amp; Whiskers!</h1>
             <p id="tagline">Caring for Your Pets, One Wag at a Time</p>
         </div>
+        <script>
+            // Redirect to Home page on successful login
+            function handleLogin(event) {
+                event.preventDefault(); // Prevent form submission
+                
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+    
+                // Basic validation
+                if (email === '' || password === '') {
+                    alert("Please enter both email and password.");
+                    return;
+                }
+    
+                // Placeholder authentication (you can replace this with actual login logic)
+                if (email === 'user@example.com' && password === 'password123') {
+                    // Redirect to the home page
+                    window.location.href = "home.html";
+                } else {
+                    alert("Invalid email or password. Please try again.");
+                }
+            }
+    
+            // Function to handle 'Forgot Password'
+            function forgotPassword() {
+                alert("Forgot password functionality is currently not available.");
+            }
+    
+            // Function to save 'Remember Me' status
+            function rememberMeStatus() {
+                const rememberMe = document.getElementById('rememberMe').checked;
+                if (rememberMe) {
+                    alert("You will be remembered!");
+                }
+            }
+        </script>
     </header>
     <main>
+        <div class="container">
+            <div class="login-form">
+                <h1 class="welcome-text">Welcome Back!</h1>
+                <img src="/images/wandw-logo-large.svg" alt="Pet Image" class="pet-image">
 
-
-
+                <form onsubmit="handleLogin(event)">
+                    <!-- Login Header -->
+                    <h2 class="login-header">Login</h2>
+                    
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <!-- Remember Me and Forgot Password Links -->
+                    <div class="form-options">
+                        <div class="form-check">
+                            <input type="checkbox" id="rememberMe" onclick="rememberMeStatus()">
+                            <label for="rememberMe">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password" onclick="forgotPassword()">Forgot password?</a>
+                    </div>
+                    
+                    <!-- Login Button -->
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+                
+                <!-- New User Sign-Up Link -->
+                <div class="new-user-link">
+                    <span>New user?</span> <a href="register.html">Create account</a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="link-section">
