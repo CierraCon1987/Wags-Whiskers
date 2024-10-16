@@ -24,44 +24,45 @@
             height: auto;
         }
 
-     /* Mission */
-.mission-section {
-    display: flex; 
-    padding: 50px 0; 
-}
+        /* Mission */
+        .mission-section {
+            display: flex;
+            padding: 50px 0;
+        }
 
-.mission-text {
-    background-color: #065f46;
-    color: #fff;
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 400px; 
-}
+        .mission-text {
+            background-color: #065f46;
+            color: #fff;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 400px;
+        }
 
-.mission-description {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #fff;
-}
+        .mission-description {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #fff;
+        }
 
-.about-mission {
-    padding: 50px 0;
-}
+        .about-mission {
+            padding: 50px 0;
+        }
 
-.mission-title {
-    font-size: 2rem;
-    margin-bottom: 45px;
-    color: #fff;
-}
+        .mission-title {
+            font-size: 2rem;
+            margin-bottom: 45px;
+            color: #fff;
+        }
 
-.mission-image {
-    max-width: 100%;
-    height: 400px; 
-    object-fit: cover; }
+        .mission-image {
+            max-width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
 
 
         /* Team */
@@ -101,7 +102,6 @@
         }
 
         /* About Store  */
-
         .store-text {
             background-color: #065f46;
             color: #fff;
@@ -132,7 +132,17 @@
 
         }
     </style>
-</head>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About | Wags &amp; Whiskers</title>
+        <link rel="icon" type="image/x-icon" href="/images/wandw-favicon.svg">
+        <link href="css/header.css" rel="stylesheet">
+        <link href="css/about.css" rel="stylesheet">
+    </head>
 
 <body>
     <header class="page-header">
@@ -148,16 +158,15 @@
                 <div class="links">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
                         <li><a href="products.html">Products</a></li>
                         <li><a href="adoption.html">Adoption</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="articles.html" class="active">Articles</a></li>
+                        <li><a href="articles.html">Articles</a></li>
                         <li id="login"><a href="login-register.html">Login</a><a href="login-register.html">Sign Up</a>
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
         <div class="salute">
@@ -167,6 +176,7 @@
         </div>
     </header>
     <main>
+        <!-- About Us Section -->
         <section class="about-us-section">
             <div class="container">
                 <section class="row align-items-center mission-section">
@@ -180,7 +190,7 @@
                             class="mission-image img-fluid">
                     </div>
                 </section>
-
+                <!-- The Team -->
                 <h2 class="team-section-title">Meet the Team</h2>
                 <section class="row team-members">
                     <article class="col-md-4 team-member">
@@ -202,7 +212,7 @@
                                 Specialist</span></h3>
                     </article>
                 </section>
-
+                <!-- Store Description -->
                 <section class="row about-store mt-4">
                     <div class="col-md-6 store-text">
                         <p class="store-description">
@@ -219,7 +229,6 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="link-section">
             <div class="company-info">
