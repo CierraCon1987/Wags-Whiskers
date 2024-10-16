@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Wags &amp; Whiskers</title>
     <link rel="icon" type="image/x-icon" href="/images/wandw-favicon.svg">
-    <link href="css/header.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <style>
@@ -24,45 +25,44 @@
             height: auto;
         }
 
-        /* Mission */
-        .mission-section {
-            display: flex;
-            padding: 50px 0;
-        }
+     /* Mission */
+.mission-section {
+    display: flex; 
+    padding: 50px 0; 
+}
 
-        .mission-text {
-            background-color: #065f46;
-            color: #fff;
-            padding: 80px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            height: 400px;
-        }
+.mission-text {
+    background-color: #065f46;
+    color: #fff;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 400px; 
+}
 
-        .mission-description {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            color: #fff;
-        }
+.mission-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #fff;
+}
 
-        .about-mission {
-            padding: 50px 0;
-        }
+.about-mission {
+    padding: 50px 0;
+}
 
-        .mission-title {
-            font-size: 2rem;
-            margin-bottom: 45px;
-            color: #fff;
-        }
+.mission-title {
+    font-size: 2rem;
+    margin-bottom: 45px;
+    color: #fff;
+}
 
-        .mission-image {
-            max-width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
+.mission-image {
+    max-width: 100%;
+    height: 400px; 
+    object-fit: cover; }
 
 
         /* Team */
@@ -102,6 +102,7 @@
         }
 
         /* About Store  */
+
         .store-text {
             background-color: #065f46;
             color: #fff;
@@ -132,17 +133,7 @@
 
         }
     </style>
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About | Wags &amp; Whiskers</title>
-        <link rel="icon" type="image/x-icon" href="/images/wandw-favicon.svg">
-        <link href="css/header.css" rel="stylesheet">
-        <link href="css/about.css" rel="stylesheet">
-    </head>
+</head>
 
 <body>
     <header class="page-header">
@@ -186,7 +177,7 @@
                             to give their pets a healthy and happy life.</p>
                     </div>
                     <div class="col-md-6">
-                        <img src="images/dog and cat.jpg" alt="Wags & Whiskers store front"
+                        <img src="images/general/dog and cat.jpg" alt="Wags & Whiskers store front"
                             class="mission-image img-fluid">
                     </div>
                 </section>
@@ -194,19 +185,20 @@
                 <h2 class="team-section-title">Meet the Team</h2>
                 <section class="row team-members">
                     <article class="col-md-4 team-member">
-                        <img src="images/man.jpg" alt="Mike Smith" class="team-member-image img-fluid rounded-circle">
+                        <img src="images/general/man.jpg" alt="Mike Smith"
+                            class="team-member-image img-fluid rounded-circle">
                         <h3 class="team-member-name">Mike Smith <span class="team-member-title">Store Manager</span>
                         </h3>
                     </article>
 
                     <article class="col-md-4 team-member">
-                        <img src="images/jessica.jpg" alt="Jessica Harper"
+                        <img src="images/general/jessica.jpg" alt="Jessica Harper"
                             class="team-member-image img-fluid rounded-circle">
                         <h3 class="team-member-name">Jessica Harper <span class="team-member-title">Owner</span></h3>
                     </article>
 
                     <article class="col-md-4 team-member">
-                        <img src="images/avery.jpg" alt="Avery Quinn"
+                        <img src="images/general/avery.jpg" alt="Avery Quinn"
                             class="team-member-image img-fluid rounded-circle">
                         <h3 class="team-member-name">Avery Quinn <span class="team-member-title">Product
                                 Specialist</span></h3>
@@ -223,7 +215,11 @@
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <img src="images/map.png" alt="Store Image" class="store-image img-fluid">
+                        <div class="contact-map">
+                            <iframe
+                                src="https://maps.google.com/maps?q=123%20King%20St%20Kitchener&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                     </div>
                 </section>
             </div>
