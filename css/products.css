@@ -107,7 +107,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    color: var(--black);
+    color: var(--white);
     min-width: 250px;
 }
 
@@ -172,7 +172,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
