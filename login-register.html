@@ -48,7 +48,7 @@
         <script>
             // Redirect to Home page on successful login
             function handleLogin(event) {
-                event.preventDefault(); // Prevent form submission
+                event.preventDefault(); 
                 
                 const email = document.getElementById('email').value;
                 const password = document.getElementById('password').value;
@@ -59,10 +59,10 @@
                     return;
                 }
     
-                // Placeholder authentication (you can replace this with actual login logic)
+                // Placeholder authentication
                 if (email === 'user@example.com' && password === 'password123') {
                     // Redirect to the home page
-                    window.location.href = "home.html";
+                    window.location.href = "index.html";
                 } else {
                     alert("Invalid email or password. Please try again.");
                 }

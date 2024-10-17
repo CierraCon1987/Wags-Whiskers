@@ -50,15 +50,14 @@
     </header>
     
     <main>
-
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-6">
                     <div class="video-container">
-                        <video id="product-video" controls>
-                            <source src="path/to/your/video.mp4" type="video/mp4"> <!-- Change the video source -->
+                        <video width="320" height="240" controls id="product-video" style="display: none;">
+                            <source src="" type="video/mp4">
                             Your browser does not support the video tag.
-                        </video>
+                          </video>
                     </div>
                     <div class="similar-products mt-4">
                         <h5>Similar Products</h5>
@@ -88,61 +87,15 @@
                         <span id="product-reviews"></span>
                         <span>25 Reviews</span>
                     </div>
-                    <button class="btn btn-primary mt-3" id="add-to-cart">Add to Cart</button>
+                    <button class="btn custom-btn mt-3" id="add-to-cart">Add to Cart</button>
                 </div>
             </div>
         </div>
 
+        <!-- JavaScript -->
         <script src="/js/product-detail.js"></script>
-
-        <script>
-            // Fetch product ID from URL parameters
-            const urlParams = new URLSearchParams(window.location.search);
-            const productId = urlParams.get('id');
-
-            // Define products (or fetch from a database in a real app)
-            const products = {
-                "#5354544": {
-                    title: "Classic Dog Toy - Treat Dispensing",
-                    price: 16.99,
-                    description: "The classic red KONG toy is the ultimate durable and versatile chew toy, perfect for keeping your pet entertained while promoting healthy teeth and gums!",
-                    features: [
-                        "Mentally stimulating toy, offering enrichment by helping satisfy a dog's instinctual needs.",
-                        "KONG classic red rubber formula for average chewers.",
-                        "Unpredictable bounce for games of fetch.",
-                        "Great for stuffing with KONG Easy Treat, Snacks, or Ziggies."
-                    ],
-                    video: "path/to/your/video.mp4" // Update video source
-                },
-                // Add more products here as needed
-            };
-
-            // Populate product details dynamically
-            if (productId && products[productId]) {
-                const product = products[productId];
-                document.getElementById('product-title').innerText = product.title;
-                document.getElementById('product-price').innerText = `$${product.price.toFixed(2)}`;
-                document.getElementById('product-description').innerText = product.description;
-                document.getElementById('item-number').innerText = `Item ${productId}`;
-
-                // Populate product features
-                const featuresList = document.createElement('ul');
-                product.features.forEach(feature => {
-                    const li = document.createElement('li');
-                    li.innerText = feature;
-                    featuresList.appendChild(li);
-                });
-                document.getElementById('product-features').appendChild(featuresList);
-
-                // Set video source
-                document.getElementById('product-video').children[0].src = product.video;
-            } else {
-                // Handle product not found
-                document.body.innerHTML = "<h2>Product not found</h2>";
-            }
-        </script>
-
     </main>
+
     <footer>
         <div class="link-section">
             <div class="company-info">

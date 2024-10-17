@@ -28,3 +28,19 @@ video {
     font-size: 1.2em;
     margin: 10px 0;
 }
+
+.custom-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 100px;
+}
+
+.custom-btn:hover {
+    background-color: var(--compliment2);
+}
