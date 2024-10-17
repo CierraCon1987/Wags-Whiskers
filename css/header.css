@@ -267,11 +267,11 @@ footer {
 }
 
 .social-icon {
-    display: flex !important;
+    display: flex;
 }
 
 .social-icon img:hover {
-    transform: scale(1.2) !important;
+    transform: scale(1.2);
 }
 
 .quick-link {
