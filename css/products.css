@@ -72,6 +72,35 @@ body {
     background-color: var(--compliment2);
 }
 
+/* Navigation Tabs */
+.nav-tabs {
+    margin-left: 30px;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--primary); 
+    color: var(--white); 
+    border-color: var(--primary); 
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    background-color: var(--compliment2); 
+    color: var(--white);
+    border-color: var(--compliment2); 
+}
+
+.nav-tabs .nav-link {
+    color: var(--primary); 
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+.nav-tabs .nav-link {
+    padding: 10px 15px;
+}
+
+
 /* Product Cards */
 .product-card {
     flex: 1 1 calc(30% - 20px); 
@@ -88,6 +117,8 @@ body {
     position: relative;
     color: var(--black);
     min-width: 250px;
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
 }
 
 /* Product Container */
@@ -98,6 +129,7 @@ body {
     max-width: 1200px; 
     margin: 0 auto; 
     padding: 0 20px;
+    border: none;
 }
 
 /* Container for image */
@@ -166,7 +198,7 @@ body {
 }
 
 .hero-container {
-    background: url('/images/general/products-main.jpg') center center no-repeat;
+    background: url('/images/products-main.jpg') center center no-repeat;
     background-size: cover;
     height: 100%;
     width: 90%;

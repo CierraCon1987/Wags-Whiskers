@@ -1,0 +1,30 @@
+.video-container {
+    position: relative;
+    padding-top: 56.25%; 
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.similar-products {
+    margin-top: 20px;
+}
+
+.similar-products .row {
+    margin-bottom: 10px;
+}
+
+.similar-products img {
+    width: 100%;
+    height: auto;
+}
+
+.ratings {
+    font-size: 1.2em;
+    margin: 10px 0;
+}

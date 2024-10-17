@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Wags &amp; Whiskers</title>
+    <link rel="icon" type="image/x-icon" href="/images/wandw-favicon.svg">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/product-detail.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="page-header">
+        <video autoplay muted loop id="background-video">
+            <source src="../images/videos/wandw-header-vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html"><img src="/images/wandw-logo-large.svg" alt="logo"></a>
+            </div>
+            <div class="link-salute">
+                <div class="links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="adoption.html">Adoption</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="articles.html">Articles</a></li>
+                        <li id="login"><a href="login-register.html">Login</a><a href="login-register.html">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="salute">
+            <h3>Welcome to</h3>
+            <h1>Wags &amp; Whiskers!</h1>
+            <p id="tagline">Caring for Your Pets, One Wag at a Time</p>
+        </div>
+    </header>
+    
+    <main>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <video id="product-video" controls>
+                            <source src="path/to/your/video.mp4" type="video/mp4"> <!-- Change the video source -->
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="similar-products mt-4">
+                        <h5>Similar Products</h5>
+                        <div class="row" id="similar-products-grid"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h1 id="product-title"></h1>
+                    <p id="product-price"></p>
+                    <select id="product-size" class="form-control mb-3">
+                        <option value="">Size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                    <select id="product-color" class="form-control mb-3">
+                        <option value="">Color</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <p id="item-number"></p>
+                    <div id="product-description" class="mb-3"></div>
+                    <div id="product-features" class="mb-3"></div>
+                    <div class="ratings">
+                        <span id="product-reviews"></span>
+                        <span>25 Reviews</span>
+                    </div>
+                    <button class="btn btn-primary mt-3" id="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/product-detail.js"></script>
+
+        <script>
+            // Fetch product ID from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            // Define products (or fetch from a database in a real app)
+            const products = {
+                "#5354544": {
+                    title: "Classic Dog Toy - Treat Dispensing",
+                    price: 16.99,
+                    description: "The classic red KONG toy is the ultimate durable and versatile chew toy, perfect for keeping your pet entertained while promoting healthy teeth and gums!",
+                    features: [
+                        "Mentally stimulating toy, offering enrichment by helping satisfy a dog's instinctual needs.",
+                        "KONG classic red rubber formula for average chewers.",
+                        "Unpredictable bounce for games of fetch.",
+                        "Great for stuffing with KONG Easy Treat, Snacks, or Ziggies."
+                    ],
+                    video: "path/to/your/video.mp4" // Update video source
+                },
+                // Add more products here as needed
+            };
+
+            // Populate product details dynamically
+            if (productId && products[productId]) {
+                const product = products[productId];
+                document.getElementById('product-title').innerText = product.title;
+                document.getElementById('product-price').innerText = `$${product.price.toFixed(2)}`;
+                document.getElementById('product-description').innerText = product.description;
+                document.getElementById('item-number').innerText = `Item ${productId}`;
+
+                // Populate product features
+                const featuresList = document.createElement('ul');
+                product.features.forEach(feature => {
+                    const li = document.createElement('li');
+                    li.innerText = feature;
+                    featuresList.appendChild(li);
+                });
+                document.getElementById('product-features').appendChild(featuresList);
+
+                // Set video source
+                document.getElementById('product-video').children[0].src = product.video;
+            } else {
+                // Handle product not found
+                document.body.innerHTML = "<h2>Product not found</h2>";
+            }
+        </script>
+
+    </main>
+    <footer>
+        <div class="link-section">
+            <div class="company-info">
+                <h2>Social Media</h2>
+                <p>
+                    Follow us on social media for the latest updates,
+                    pet care tips, and exclusive offers! Stay connected with Wags
+                    &amp; Whiskers and join our community of pet lovers.
+                </p>
+                <div class="social-icon">
+                    <img src="images/socials/socials-facebook.svg" alt="facebook icon">
+                    <img src="images/socials/socials-x.svg" alt="x icon">
+                    <img src="images/socials/socials-instagram.svg" alt="instagram icon">
+                    <img src="images/socials/socials-pinterest.svg" alt="pinterest icon">
+                    <img src="images/socials/socials-youtube.svg" alt="youtube icon">
+                    <img src="images/socials/socials-tiktok.svg" alt="tiktok icon">
+                    <img src="images/socials/socials-whatsapp.svg" alt="whatsapp icon">
+                </div>
+            </div>
+
+            <div class="quick-link">
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="adoption.html">Adoption</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </div>
+
+            <div class="legal">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                    <li><a href="#">Refunds</a></li>
+                    <li><a href="#">Guarantee</a></li>
+                    <li><a href="#">Shipping</a></li>
+                </ul>
+            </div>
+
+            <div class="brand-logo">
+                <a href="index.html"><img src="images/wandw-logo-large.svg" alt="logo"></a>
+            </div>
+        </div>
+
+        <div class="copy-right-section">
+            <div class="right-section">
+                Copyright &copy; 2024 Wags &amp; Whiskers. All right reserved.
+            </div>
+
+            <div class="cookies">
+                <a href="#">Cookies Settings</a>
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
